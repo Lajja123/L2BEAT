@@ -13,7 +13,7 @@ function Navbar() {
   <a class="navbar-brand navbar-logo" href="/">
           {/* <img src={logo} className="logo-img" /> */}
           <div style={{color:"white",fontSize:"1.5rem"}}>
-            L2BEAT | <span style={{color:"#a6ff35"}}>GOVERNANCE</span>
+          EMBARK | <span style={{color:"#a6ff35"}}>GOVERNANCE</span>
           </div>
         </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

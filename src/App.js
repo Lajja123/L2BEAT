@@ -7,6 +7,7 @@ import MemberProfile from "./components/member-profile/MemberProfile"
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes,Route } from 'react-router-dom';
 import Navbar from "./components/navbar/Navbar"
+import Meet from "./components/huddle-meet/Meet";
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
               <Route path="/user-profile" element={<Userprofile />}></Route>
               <Route path="/member-profile" element={<MemberProfile />}></Route>
               <Route path="/daos-member" element={<DaosMember />}></Route>
+              <Route path="/meet-call" element={<Meet />}></Route>
             </Routes>
           </Router>
         </div>

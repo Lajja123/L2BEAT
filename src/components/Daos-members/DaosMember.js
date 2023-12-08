@@ -6,6 +6,7 @@ import { data } from "../../dummyData/DaosMember.js";
 import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import arrow from "../../assests/arrow.png"
+import Footer from '../footer/Footer.js';
 
 function DaosMember() {
     const location = useLocation();
@@ -22,29 +23,7 @@ function DaosMember() {
 
     return (
         <div style={{ textAlign: "start", margin: "20px" }}>
-           <Link to="/all-daos">
-        <div
-          style={{
-            color: "white",
-            display: "flex",
-            alignItems: "center",
-            margin:"20px auto",
-            width:"75%",
-            cursor: "pointer",
-            // padding:"0px 10px"
-          }}
-        >
-          <img
-            src={arrow}
-            style={{
-              // transform: "rotate(180deg)",
-              width: "25px",
-              margin:"0px 10px"
-            }}
-          ></img>
-          Back
-        </div>
-      </Link>
+           
     <div className='single-dao'>
         {singleApi && (
           <>
@@ -98,6 +77,7 @@ function DaosMember() {
           ))}
         </div>
       </div>
+      <Footer/>
         </div>
     );
 }

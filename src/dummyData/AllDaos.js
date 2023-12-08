@@ -5,6 +5,8 @@ import img4 from "../assests/push.jpg";
 import img5 from "../assests/chainlink.jpg";
 import img6 from "../assests/xdc.webp";
 import img7 from "../assests/op.png";
+import img8 from "../assests/arbitrum.jpg";
+// import Footer from "../components/footer/Footer";
 
 export const data = [
     {
@@ -56,5 +58,13 @@ export const data = [
         "Optimism leads the Superchain project, focusing on interoperability and composability among different chains, and integrates isolated L2 solutions into a unified layer. It also experiments with ecosystem funding through protocol revenue, promoting public good development.",
       image_url: img7,
     },
+    {
+      id: 8,
+      name: "Arbitrum",
+      description:
+        "The Arbitrum DAO is a decentralized autonomous organization (DAO) built on the Ethereum blockchain. At its core, the Arbitrum DAO is a community-driven governance mechanism that allows $ARB token holders to propose and vote on changes to the organization and the technologies it governs.",
+      image_url: img8,
+    },
+   
    
   ];

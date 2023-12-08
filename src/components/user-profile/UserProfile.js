@@ -9,6 +9,7 @@ import {data2} from "../../dummyData/PastCall"
 import User from "../../assests/user.png"
 import { Link } from 'react-router-dom';
 import arrow from "../../assests/arrow.png"
+import Footer from '../footer/Footer';
 
 function UserProfile(props) {
     const location = useLocation();
@@ -57,9 +58,10 @@ function UserProfile(props) {
   
    
     return (
+      <div>
         <div class="container">
         <div class="row">
-        <Link to="/all-daos">
+        {/* <Link to="/all-daos">
         <div
           style={{
             color: "white",
@@ -81,7 +83,7 @@ function UserProfile(props) {
           ></img>
           Back
         </div>
-      </Link>
+      </Link> */}
           <div class="col-md-3 profile-left">
           <div className='single-dao-profile'>
         
@@ -213,7 +215,10 @@ function UserProfile(props) {
     
           </div>
         </div>
+    
         </div>
+            <Footer/>
+            </div>
     );
 }
 export default UserProfile;

@@ -7,6 +7,7 @@ import arrow from "../../assests/arrow.png"
 import {data} from "../../dummyData/OfficeHours"
 import {data2} from "../../dummyData/PastCall"
 import Delegate from '../connect-button/DelegateButton';
+import Footer from '../footer/Footer';
 
 function MemberProfile(props) {
     const location = useLocation();
@@ -60,32 +61,11 @@ function MemberProfile(props) {
         }
       }, [location]);
     return (
+      <div>
         <div class="container">
      
         <div class="row">
-        <Link to="/all-daos">
-        <div
-          style={{
-            color: "white",
-            display: "flex",
-            alignItems: "center",
-            margin:"20px auto",
-            width:"100%",
-            cursor: "pointer",
-            // padding:"0px 10px"
-          }}
-        >
-          <img
-            src={arrow}
-            style={{
-              // transform: "rotate(180deg)",
-              width: "25px",
-              margin:"0px 10px"
-            }}
-          ></img>
-          Back
-        </div>
-      </Link>
+      
           <div class="col-md-3 profile-left" >
           <div className='single-dao-profile'>
         {singleApi && (
@@ -106,7 +86,9 @@ function MemberProfile(props) {
               {singleApi.name}
             </h2></div>
             <div className='profile-btnflex'>
+              <Link to="/meet-call" className='profile-btnflex' style={{textDecoration:"none"}}>
               <button>Book a call</button>
+              </Link>
               {/* <Delegate/> */}
               <button>Delegate</button>
             </div>
@@ -228,7 +210,10 @@ function MemberProfile(props) {
     
           </div>
         </div>
+       
         </div>
+         <Footer/>
+         </div>
     );
 }
 

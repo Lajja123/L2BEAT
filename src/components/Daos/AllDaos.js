@@ -3,6 +3,7 @@ import { data } from "../../dummyData/AllDaos.js";
 import "../Daos/AllDaos.css";
 import { useNavigate } from "react-router-dom";
 import dao1 from "../../assests/dao1.jpg"
+import Footer from "../footer/Footer.js";
 
 function AllDaos() {
   const [apiData, setApiData] = useState([]);
@@ -30,7 +31,9 @@ function AllDaos() {
            
           ))}
         </div>
+       
       </div>
+      <Footer/>
     </>
   );
 }
