@@ -177,7 +177,11 @@ function UserProfile(props) {
               {data.map((dao, index) => (
                 
                 <div class="api-card" style={{padding:"0px",marginTop:"0px"}} >
-                <video  src={dao.image_url} class="card-img-top" alt="..."/>
+                 <video width="300" controls class="card-img-top">
+  <source src={dao.image_url} type="video/mp4"/>
+ 
+
+</video>
               
                 <div class="card-body profile-card">
                   <h5 class="card-title">{dao.name}</h5>
@@ -197,8 +201,11 @@ function UserProfile(props) {
                
                 
                  <div class="api-card" style={{padding:"0px",marginTop:"0px"}}  >
-     <video  src={dao.image_url} class="card-img-top" alt="..."/>
-   
+     <video width="300" controls class="card-img-top">
+  <source src={dao.image_url} type="video/mp4"/>
+ 
+
+</video>
      <div class="card-body profile-card">
        <h5 class="card-title">{dao.name}</h5>
        <p class="card-text description" style={{textAlign:"left",padding:"0px"}}>{dao.time}</p>

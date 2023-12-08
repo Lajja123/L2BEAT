@@ -8,6 +8,7 @@ import {data} from "../../dummyData/OfficeHours"
 import {data2} from "../../dummyData/PastCall"
 import Delegate from '../connect-button/DelegateButton';
 import Footer from '../footer/Footer';
+import call from "../../assests/call.mp4"
 
 function MemberProfile(props) {
     const location = useLocation();
@@ -171,7 +172,13 @@ function MemberProfile(props) {
                {data.map((dao, index) => (
                  
                  <div class="api-card" style={{padding:"0px",marginTop:"0px"}} >
-                 <video  src={dao.image_url} class="card-img-top" alt="..."/>
+                 {/* <video  src={dao.image_url} class="card-img-top" alt="..."/> */}
+                 {/* <video  src={call} ></video> */}
+                 <video width="300" controls class="card-img-top">
+  <source src={dao.image_url} type="video/mp4"/>
+ 
+
+</video>
                
                  <div class="card-body profile-card">
                    <h5 class="card-title">{dao.name}</h5>
@@ -191,7 +198,11 @@ function MemberProfile(props) {
                 
                  
                   <div class="api-card" style={{padding:"0px",marginTop:"0px"}}  >
-      <video  src={dao.image_url} class="card-img-top" alt="..."/>
+      <video width="300" controls class="card-img-top">
+  <source src={dao.image_url} type="video/mp4"/>
+ 
+
+</video>
     
       <div class="card-body profile-card">
         <h5 class="card-title">{dao.name}</h5>
