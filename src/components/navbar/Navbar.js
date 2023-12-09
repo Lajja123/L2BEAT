@@ -12,8 +12,8 @@ function Navbar() {
   <div class="container-fluid">
   <a class="navbar-brand navbar-logo" href="/">
           {/* <img src={logo} className="logo-img" /> */}
-          <div style={{color:"white",fontSize:"1.5rem"}}>
-          EMBARK | <span style={{color:"#a6ff35"}}>GOVERNANCE</span>
+          <div style={{color:"white",fontSize:"1.5rem",letterSpacing:"1px"}}>
+          EMBARK
           </div>
         </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

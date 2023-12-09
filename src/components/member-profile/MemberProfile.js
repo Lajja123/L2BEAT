@@ -122,13 +122,11 @@ function MemberProfile(props) {
           <div class="col-md-9 mp-sec2">
             
             <h1 style={{padding:"10px 0px"}}>
-            Ready, set, mentor! 🚀
+            Plutus DAOs
             </h1>
-            <div style={{padding:"10px 0px",fontSize:"20px"}}>
-            You've completed X hours of mentoring.
-            </div>
+      
             <div style={{padding:"10px 0px",letterSpacing:"1px", fontSize:"15px"}}>
-            Available time: 8:0 AM EST
+            Available time:  0800UTC 14th Dec 2023
             <div>
             {isDateTimePickerOpen && (
         <input

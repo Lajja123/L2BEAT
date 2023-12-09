@@ -16,6 +16,7 @@ import { useHuddleStore } from "@huddle01/huddle01-client/store";
 import PeerVideoAudioElem from "../huddle-meet/VideoElement"
 import MeVideoElem from "../huddle-meet/PeerVideoAudioElem"
 import Footer from "../footer/Footer";
+import Popup from "./Popup";
 
 function Meet() {
   const [join, setjoin] = useState();
@@ -34,6 +35,16 @@ function Meet() {
   const roomState = useHuddleStore((state) => state.roomState);
   const recordingState = useHuddleStore((state) => state.recordingState);
   const recordings = useHuddleStore((state) => state.recordings);
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
   // console.log(roomId)
   const joined = () => toast.warning("already joined");
 
@@ -57,6 +68,7 @@ function Meet() {
       console.log({ error });
     }
   };
+
   // const useHost = ({peerId}) => {
 
   return (
@@ -66,9 +78,13 @@ function Meet() {
         <div className="video-control">
           <MeVideoElem />
           <div className="card" style={{flexDirection:"row",justifyContent:"center",background:"none"}}>
-            <button className="button" onClick={handleJoin} style={{background:"#b0f127"}}>
+            {/* <button className="button" onClick={openModal} >
               <div className="video-icon"><TbPhonePlus /></div>
-            </button>
+            </button> */}
+            <button type="button" class="btn btn-primary button" data-bs-toggle="modal" data-bs-target="#exampleModal"style={{background:"#b0f127",color:"black"}}>
+  End Call
+</button>
+<Popup/>
             <button
               className="button"
               onClick={() => huddleClient.enableWebcam()}
@@ -109,6 +125,7 @@ function Meet() {
             >
               <BsStopCircle />
             </button>
+           
           </div>
         </div>
         <div className="peers-screens">
